@@ -65,7 +65,7 @@ public class MainFrame extends JFrame {
         animationTimer = new Timer(30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                custComponent.update(); // Update rocket position
+                custComponent.update();
             }
         });
         animationTimer.start(); 
@@ -75,13 +75,13 @@ public class MainFrame extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("spaceX");
 
-        // Load the icon from a file path
+
         ImageIcon icon = new ImageIcon("/Users/alanluke/eclipse-workspace/spaceX/spacexIcon.png");
 
-        // Resize the icon to a smaller size (e.g., 24x24 pixels)
-        ImageIcon resizedIcon = resizeIcon(icon, 24, 24); // Adjust the size as needed
+   
+        ImageIcon resizedIcon = resizeIcon(icon, 24, 24); 
 
-        // Set the resized icon to the menu
+        
         fileMenu.setIcon(resizedIcon);
 
         JMenuItem exportDataItem = new JMenuItem("Features");
@@ -98,10 +98,10 @@ public class MainFrame extends JFrame {
         return menuBar;
     }
 
-    // Method to resize the icon
+    
     private ImageIcon resizeIcon(ImageIcon icon, int width, int height) {
-        Image image = icon.getImage(); // Get the original image
-        Image resizedImage = image.getScaledInstance(width, height, Image.SCALE_SMOOTH); // Resize the image
-        return new ImageIcon(resizedImage); // Return a new ImageIcon with the resized image
+        Image image = icon.getImage(); 
+        Image resizedImage = image.getScaledInstance(width, height, Image.SCALE_SMOOTH); 
+        return new ImageIcon(resizedImage); 
     }
 }
