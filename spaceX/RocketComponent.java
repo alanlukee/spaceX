@@ -7,24 +7,24 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 public class RocketComponent extends JPanel {
-    private int rocketYPosition = 500; // Starting Y position of the rocket
-    private boolean isLaunching = false; // Flag to indicate if the rocket is launching
+    private int rocketYPosition = 500; 
+    private boolean isLaunching = false; 
 
     public RocketComponent() {
-        // Set preferred size
-        setPreferredSize(new Dimension(300, 400)); // Increase height for more space
+       
+        setPreferredSize(new Dimension(300, 400));
         
-        // Set background color to black
+        
         setBackground(Color.BLACK);
 
-        // Create and set a border
+       
         Border innerBorder = BorderFactory.createTitledBorder(
-            BorderFactory.createLineBorder(Color.WHITE), // Base border color
-            "StarShip",                                  // Title text
-            TitledBorder.LEFT,                           // Title position
-            TitledBorder.TOP,                            // Title placement
-            new Font("SansSerif", Font.PLAIN, 12),        // Font for the title
-            Color.WHITE                                   // Title color
+            BorderFactory.createLineBorder(Color.WHITE), 
+            "StarShip",                                 
+            TitledBorder.LEFT,                         
+            TitledBorder.TOP,                          
+            new Font("SansSerif", Font.PLAIN, 12),     
+            Color.WHITE                                 
         );
         Border outerBorder = BorderFactory.createLineBorder(Color.RED, 2, true);
         setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));
@@ -80,8 +80,8 @@ public class RocketComponent extends JPanel {
         }
     }
     public void returnToStarbase() {
-        isLaunching = false; // Stop the launching process if it's active
-        rocketYPosition = 500; // Reset to the starting position
-        repaint(); // Refresh the component to show the rocket in the new position
+        isLaunching = false; 
+        rocketYPosition = 500;
+        repaint(); 
     }
 }
